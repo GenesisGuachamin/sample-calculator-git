@@ -6,14 +6,17 @@ public class Main {
     public static void main(String[] args) {
         // Press Alt+Intro with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CalculatorService calculatorService = new CalculatorServiceImpl();
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // Crear una instancia de la calculadora
+        Calculator calculator = new Calculator(calculatorService);
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        // Usar los métodos de la calculadora
+        System.out.println(calculator.sumar(3, 4));        // Imprime: 7
+        System.out.println(calculator.restar(5, 2));       // Imprime: 3
+        System.out.println(calculator.multiplicar(2, 6));  // Imprime: 12
+        System.out.println(calculator.dividir(10, 5));     // Imprime: 2.0
+        System.out.println(calculator.dividir(8, 0));      // Lanza una excepción: ArithmeticException
     }
+
 }
