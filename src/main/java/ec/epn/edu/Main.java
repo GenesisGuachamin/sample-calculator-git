@@ -16,7 +16,10 @@ public class Main {
         System.out.println(calculator.restar(5, 2));       // Imprime: 3
         System.out.println(calculator.multiplicar(2, 6));  // Imprime: 12
         System.out.println(calculator.dividir(10, 5));     // Imprime: 2.0
-        System.out.println(calculator.dividir(8, 0));      // Lanza una excepción: ArithmeticException
+        //System.out.println(calculator.dividir(8, 0));      // Lanza una excepción: ArithmeticException
+        System.out.println("Segundo Commit");
+        System.out.println("Push");
+
     }
 
 }
